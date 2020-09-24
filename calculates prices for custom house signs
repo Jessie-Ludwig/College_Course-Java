@@ -1,0 +1,49 @@
+// HouseSign.java - This program calculates prices for custom house signs.
+
+
+public class HouseSign 
+{
+	public static void main(String args[])
+	{
+		// This is the work done in the housekeeping() method
+		// Declare and initialize variables here.
+    double charge = 0.00;
+    double minPrice = 35.00;
+    int numChars = 8;
+    String woodType = "oak";
+    String color = "gold";
+			 // Charge for this sign.
+    final double EXTRACHARGE = 4.0;
+    final double OAKCHARGE = 20.0; 
+    final double GOLDCHARGE = 15.0;
+    		 // Number of characters.
+ if(numChars > 5)
+ {
+     charge += minPrice + (EXTRACHARGE * (numChars - 5));
+ }
+			 // Color of characters.
+    if(color.equals("gold"))
+    { 
+        charge += GOLDCHARGE;
+    
+    }
+			 // Type of wood.
+			// JL string compare 
+            if(woodType.equals("oak")) 
+            {
+                charge += OAKCHARGE;
+                
+            }
+		// This is the work done in the detailLoop() method
+		// Write assignment and if statements here as appropriate.
+		
+
+
+		
+		// This is the work done in the endOfJob() method	
+		// Output Charge for this sign.
+		System.out.println("The charge for this sign is $" + charge);
+
+		System.exit(0); 
+	}
+} 	
